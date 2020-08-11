@@ -31,8 +31,8 @@ const Main = (props) => {
 			return (
 
 				<Grid xs = {12} id = {index} className = {cssPrefix + 'row'} direction = "row" container>
-					<Cell text = { value.start_time} xs = {4} />
-					<Cell text = { value.end_time} xs = {4}  />
+					<Cell text = { value.start_time} xs = {6} />
+					<Cell text = { value.end_time} xs = {6}  />
 				</Grid>
 			);
 		});
@@ -46,10 +46,12 @@ const Main = (props) => {
 			<Grid xs = {11} item>
 				<Grid xs = {6} >
 					<Paper justify = "center">
-						<Cell text = "Activity Period"/>
-						{getHeader()}
+						<Grid container direction = 'row' justify = "space-between">
+							<Cell text = {Test.members[index].real_name}/>
+							<EventTwoToneIcon color = "primary" fontSize= "large" onClick = { () => { setOpen (!open)}} />
+						</Grid>
+							{getHeader()}
 						{showTimeStamps(0)}
-						<EventTwoToneIcon color = "primary" fontSize= "large" onClick = { () => { setOpen (!open)}} />
 					</Paper>
 				</Grid>
 			</Grid>

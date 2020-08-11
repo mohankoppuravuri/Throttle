@@ -2,6 +2,7 @@ import React,
 	{ useState }  from 'react';
 import ClipLoader from "react-spinners/ClipLoader";
 import Users      from './userNames';
+import Grid       from '@material-ui/core/Grid';
 
 const Main = () => {
 	const [ loader, setLoader]	= useState (true);
@@ -11,7 +12,11 @@ const Main = () => {
 	if (loader)
 		return <ClipLoader className = "loader" loading = {true} size = {150}/>
 
-	return <Users />;
+	return (
+		<Grid container className = "root">
+			<Users />
+		</Grid>
+	);
 };
 
 export default Main;
