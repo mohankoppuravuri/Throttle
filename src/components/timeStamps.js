@@ -7,6 +7,7 @@ import Test       from '../tempData/Test'
 
 import EventTwoToneIcon from '@material-ui/icons/EventTwoTone';
 import Cell       from './cell';
+import TimeLine   from './timeLine';
 const cssPrefix = "main-";
 
 const getHeader = () => {
@@ -23,6 +24,7 @@ const getHeader = () => {
 
 const Main = (props) => {
 	const {index} = props;
+	const [open, setOpen] = useState (false);
 
 	const showTimeStamps = () => {
 		const rows  = Test.members[index].activity_periods.map ( value => {
@@ -36,6 +38,8 @@ const Main = (props) => {
 		});
 		return rows	
 	};
+	if (open)
+		return <TimeLine index = {index} />
 
 	return (
 		<Grid className = {cssPrefix + 'modal'} container justify = "center">
@@ -45,7 +49,7 @@ const Main = (props) => {
 						<Cell text = "Activity Period"/>
 						{getHeader()}
 						{showTimeStamps(0)}
-						<EventTwoToneIcon color = "primary" fontSize= "large"/>
+						<EventTwoToneIcon color = "primary" fontSize= "large" onClick = { () => { setOpen (!open)}} />
 					</Paper>
 				</Grid>
 			</Grid>
