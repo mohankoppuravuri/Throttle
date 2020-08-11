@@ -12,6 +12,11 @@
 	left : 25%;
 	bottom : 45%;
 }
+.calander {
+	position : absolute;
+	left     : 25%;
+	top      : 40px;
+}
 .css-1yzwa33 {
 	position : absolute;
 	left     : 45%;
