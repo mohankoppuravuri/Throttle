@@ -1,3 +1,4 @@
+//Table on the first page showing all the names and ids' of users'
 import React, {
 	useState,
 }				    from 'react';

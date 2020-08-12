@@ -1,3 +1,4 @@
+//This code shows the calander
 import React		  from 'react';
 import Grid           from '@material-ui/core/Grid';
 import Paper          from '@material-ui/core/Paper';
@@ -11,7 +12,6 @@ import {
 	DateNavigator,
 	Toolbar,
 }                     from '@devexpress/dx-react-scheduler-material-ui';
-import CloseIcon      from '@material-ui/icons/Close';
 import 'react-calendar-timeline/lib/Timeline.css'
 
 const Main = (props) => {
@@ -20,7 +20,7 @@ const Main = (props) => {
 
 	let schedulerData = Test.members[index].activity_periods.map (data => {
 		return  {
-			title: 'item 1',
+			title: 'Gym',
 			startDate: moment(data.start_time).format(),
 			endDate: moment (data.end_time).format ()
 		};
