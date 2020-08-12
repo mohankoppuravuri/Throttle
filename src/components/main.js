@@ -4,6 +4,9 @@ import ClipLoader from "react-spinners/ClipLoader";
 import Users      from './userNames';
 import Grid       from '@material-ui/core/Grid';
 import bg         from '../throttle.png';
+import Cell       from './cell';
+import Typography from '@material-ui/core/Typography';
+
 const Main = () => {
 	const [ loader, setLoader]	= useState (true);
 

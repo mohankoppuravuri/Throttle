@@ -46,7 +46,7 @@ const Main = (props) => {
 						<Grid xs = {6} >
 							<Paper justify = "center">
 								<Grid container direction = 'row' justify = "space-between">
-									<Cell text = {Test.members[index].real_name}/>
+									<Cell text = {"Activity Periods of " + Test.members[index].real_name}/>
 									<EventTwoToneIcon className = "icon-calander" color = "primary" fontSize= "large" onClick = { () => { setOpen (!open)}} />
 								</Grid>
 								{getHeader()}

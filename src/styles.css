@@ -11,8 +11,9 @@
 	border     : 4px;
 }
 .userList-root {
-	margin    : 15px;
-	width     : 500px;
+	margin        : 15px;
+	width         : 500px;
+	border-radius : 5px; 
 }
 
 .icon-timePeriod, .icon-calander {
@@ -21,6 +22,7 @@
 .icon-timePeriod:hover, .icon-calander:hover {
 }
 .row {
+	backgroudn : #f1f9ec;
 }
 
 .cell {
@@ -34,7 +36,7 @@
 .calander {
 	position : absolute;
 	left     : 25%;
-	top      : 40px;
+	top      : 12.5%;
 }
 .css-1yzwa33 {
 	position : absolute;

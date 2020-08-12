@@ -40,12 +40,15 @@ const Main = () => {
 		);	
 	};
 	return (
-		<Paper className = "userList-root" justify = "center">
-			{getHeader()}
-			{showData(0)}
-			{showData(1)}
-			<Modal row = {currentRow} open = {open} setOpen = { () => {setOpen (false)}} />
-		</Paper>
+		<Grid className = "userList-root">
+			<Cell text = "Users List" />
+			<Paper justify = "center">
+				{getHeader()}
+				{showData(0)}
+				{showData(1)}
+				<Modal row = {currentRow} open = {open} setOpen = { () => {setOpen (false)}} />
+			</Paper>
+		</Grid>
 	);
 };
 
