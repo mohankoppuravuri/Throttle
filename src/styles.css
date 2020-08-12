@@ -1,15 +1,32 @@
-.main-header {
-	background : antiquewhite; 
+.root {
+	min-height  : 100vh;
+	background  : #f89482;
+	overflow    : hidden;
+}
+.logo {
+	padding     : 15px;
+}
+.header {
+	background : #ee0f6f; 
 	border     : 4px;
 }
-.root {
+.userList-root {
+	margin    : 15px;
+	width     : 500px;
 }
-.main-row {
+
+.icon-timePeriod, .icon-calander {
+	cursor  : pointer;	
 }
-.main-cell {
+.icon-timePeriod:hover, .icon-calander:hover {
+}
+.row {
+}
+
+.cell {
 	padding    : 5px;
 }
-.main-modal {
+.modal {
 	position : absolute;
 	left : 25%;
 	bottom : 45%;

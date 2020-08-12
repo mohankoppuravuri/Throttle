@@ -3,7 +3,7 @@ import React,
 import ClipLoader from "react-spinners/ClipLoader";
 import Users      from './userNames';
 import Grid       from '@material-ui/core/Grid';
-
+import bg         from '../throttle.png';
 const Main = () => {
 	const [ loader, setLoader]	= useState (true);
 
@@ -14,7 +14,12 @@ const Main = () => {
 
 	return (
 		<Grid container className = "root">
-			<Users />
+			<Grid xs = {11} item>
+				<Grid justify = "center" className = "logo">
+					<img src={bg} alt="none" />
+				</Grid>
+				<Users />
+			</Grid>
 		</Grid>
 	);
 };

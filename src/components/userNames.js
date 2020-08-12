@@ -1,15 +1,13 @@
 import React, {
 	useState,
-}				  from 'react';
-import Typography from '@material-ui/core/Typography';
-import Grid       from '@material-ui/core/Grid';
-import Paper      from '@material-ui/core/Paper';
-import Test       from '../tempData/Test'
+}				    from 'react';
+import Grid         from '@material-ui/core/Grid';
+import Paper        from '@material-ui/core/Paper';
+import Test         from '../tempData/Test'
 
-import Cell       from './cell';
-import Modal      from './modal';
-const cssPrefix = "main-";
-console.log(Test);
+import Cell         from './cell';
+import Modal        from './modal';
+import TimelineIcon from '@material-ui/icons/Timeline';
 
 const getHeader = () => {
 	const list = ['Id' ,'Name'].map ((data, i) => {
@@ -17,7 +15,7 @@ const getHeader = () => {
 	});
 
 	return (
-		<Grid xs = {12} className = {cssPrefix + "header"} direction = "row" container>
+		<Grid xs = {12} className = "header" direction = "row" container>
 			{list}
 		</Grid>
 	);
@@ -34,26 +32,20 @@ const Main = () => {
 
 	const showData = (index) => {
 		return (
-			<Grid xs = {12} id = {index} className = {cssPrefix + 'row'} direction = "row" container onClick = { () => openModel (index)}>
-				<Cell text = { Test.members[index].id} xs = {6}  />
+			<Grid xs = {12} id = {index} className = 'row' direction = "row" container >
+				<Cell text = { Test.members[index].id} xs = {5}  />
 				<Cell text = { Test.members[index].real_name} xs = {6} />
+				<Cell text = {<TimelineIcon className = "icon-timePeriod" onClick = { () => openModel (index)}/>} xs = {1} />
 			</Grid>
 		);	
 	};
 	return (
-		<Grid container justify = "center">
-			<Grid xs = {11} item>
-				<Grid xs = {6} >
-				<Paper justify = "center">
-					{getHeader()}
-					{showData(0)}
-					{showData(1)}
-				</Paper>
-					</Grid>
-			</Grid>
-
+		<Paper className = "userList-root" justify = "center">
+			{getHeader()}
+			{showData(0)}
+			{showData(1)}
 			<Modal row = {currentRow} open = {open} setOpen = { () => {setOpen (false)}} />
-		</Grid>
+		</Paper>
 	);
 };
 
